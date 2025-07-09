@@ -287,6 +287,15 @@ void loop() {
     Serial.printf("Turning off Wemo# %i\n",MYWEMO1);
     wemoWrite(MYWEMO1,LOW);
   } 
+  //Third Wemo 
+      if (RPM > 3701){
+    Serial.printf("Turning on Wemo# %i\n",MYWEMO1);
+    wemoWrite(MYWEMO2,HIGH);
+  }
+  if (RPM < 3700){
+    Serial.printf("Turning off Wemo# %i\n",MYWEMO1);
+    wemoWrite(MYWEMO2,LOW);
+  } 
   //1st Light
      if (RPM > 3701){
      Serial.println(BULB1);
